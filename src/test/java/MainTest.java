@@ -16,9 +16,9 @@ public class MainTest {
     private void test(int[] array) {
         String ser = Main.ser(array);
 
-        float startBytes = (float) (array.length * 4);
-        float endBytes = (float) (ser.length() / 2);
-        float contraction = ((startBytes - endBytes) / startBytes) * 100;
+        int startBytes =  array.length * 4;
+        int endBytes =  ser.length();
+        float contraction = ((float) endBytes /(float) startBytes) * 100;
 
         System.out.println("Исходная строка: " + arrayToString(array));
         System.out.println("Сжатая строка: " + ser);
